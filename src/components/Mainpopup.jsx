@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from 'next/image';
+import Link from "next/link";
 import bg from "@assets/images/mainpopup/bg.jpeg";
 import p1 from "@assets/images/mainpopup/p1.jpg";
 import p2 from "@assets/images/mainpopup/p2.jpg";
@@ -90,6 +91,8 @@ export default function MainPopup() {
 
 
                 {/* Right Side (Products - Vertical Alignment and Scrollable) */}
+                
+
                 <div className="w-full md:w-1/2 h-full overflow-hidden flex flex-col">
                     <div className="md:p-5 p-3">
                         <h1 className="border-b-2 border-black mb-2 text-xl sm:text-2xl">Recommended Products</h1>
@@ -98,70 +101,75 @@ export default function MainPopup() {
                     {/* Scrollable Product List */}
                     <div className="overflow-y-auto max-h-[calc(60vh-150px)] pl-5 pr-5 space-y-2">
                         {/* Product 1 */}
-                        <div className="p-3 rounded-lg w-full flex">
-                            <div className="w-[30%]">
-                                <Image
-                                    src={p1}
-                                    alt="Product 1"
-                                    className="w-full h-[auto] object-cover rounded-lg"
-                                />
+                        <Link href="/product/neem-tooth-paste">
+                            <div className="p-3 rounded-lg w-full flex cursor-pointer hover:bg-gray-100 transition">
+                                <div className="w-[30%]">
+                                    <Image
+                                        src={p1}
+                                        alt="Product 1"
+                                        className="w-full h-[auto] object-cover rounded-lg"
+                                    />
+                                </div>
+                                <div className="w-[70%] pl-4 flex flex-col justify-center">
+                                    <p className="mt-2 text-start text-xl font-bold">Neem Tooth Paste</p>
+                                    <p className="text-start text-lg">₹125.00</p>
+                                </div>
                             </div>
-                            <div className="w-[70%] pl-4 flex flex-col justify-center">
-                                <p className="mt-2 text-start text-xl font-bold">Neem Tooth Paste</p>
-                                {/* Add Price if necessary */}
-                                <p className="text-start text-lg">₹125.00</p>
-                            </div>
-                        </div>
+                        </Link>
 
                         {/* Product 2 */}
-                        <div className="p-3 rounded-lg w-full flex">
-                            <div className="w-[30%]">
-                                <Image
-                                    src={p2}
-                                    alt="Product 2"
-                                    className="w-full h-[auto] object-cover rounded-lg"
-                                />
+                        <Link href="/product/anti-dandruff-hair-oil">
+                            <div className="p-3 rounded-lg w-full flex cursor-pointer hover:bg-gray-100 transition">
+                                <div className="w-[30%]">
+                                    <Image
+                                        src={p2}
+                                        alt="Product 2"
+                                        className="w-full h-[auto] object-cover rounded-lg"
+                                    />
+                                </div>
+                                <div className="w-[70%] pl-4 flex flex-col justify-center">
+                                    <p className="mt-2 text-start text-xl font-bold">Anti Dandruff Hair Oil</p>
+                                    <p className="text-start text-lg">₹350.00</p>
+                                </div>
                             </div>
-                            <div className="w-[70%] pl-4 flex flex-col justify-center">
-                                <p className="mt-2 text-start text-xl font-bold">Anti Dandruff Hair Oil</p>
-                                {/* Add Price if necessary */}
-                                <p className="text-start text-lg">₹350.00</p>
-                            </div>
-                        </div>
+                        </Link>
 
                         {/* Product 3 */}
-                        <div className="p-3 rounded-lg w-full flex">
-                            <div className="w-[30%]">
-                                <Image
-                                    src={p3}
-                                    alt="Product 3"
-                                    className="w-full h-[auto] object-cover rounded-lg"
-                                />
+                        <Link href="/product/energizing-body-polish-scrub-with-orange-turmeric-walnut">
+                            <div className="p-3 rounded-lg w-full flex cursor-pointer hover:bg-gray-100 transition">
+                                <div className="w-[30%]">
+                                    <Image
+                                        src={p3}
+                                        alt="Product 3"
+                                        className="w-full h-[auto] object-cover rounded-lg"
+                                    />
+                                </div>
+                                <div className="w-[70%] pl-4 flex flex-col justify-center">
+                                    <p className="mt-2 text-start text-xl font-bold">Energizing Body Polish Scrub With Orange Turmeric & Walnut</p>
+                                    <p className="text-start text-lg">₹425.00</p>
+                                </div>
                             </div>
-                            <div className="w-[70%] pl-4 flex flex-col justify-center">
-                                <p className="mt-2 text-start text-xl font-bold">Energizing Body Polish Scrub With Orange Turmeric & Walnut</p>
-                                {/* Add Price if necessary */}
-                                <p className="text-start text-lg">₹425.00</p>
-                            </div>
-                        </div>
+                        </Link>
 
                         {/* Product 4 */}
-                        <div className="p-3 rounded-lg w-full flex">
-                            <div className="w-[30%]">
-                                <Image
-                                    src={p4}
-                                    alt="Product 4"
-                                    className="w-full h-[auto] object-cover rounded-lg"
-                                />
+                        <Link href="/product/deep-moisturising-body-wash-with-honey-apricot">
+                            <div className="p-3 rounded-lg w-full flex cursor-pointer hover:bg-gray-100 transition">
+                                <div className="w-[30%]">
+                                    <Image
+                                        src={p4}
+                                        alt="Product 4"
+                                        className="w-full h-[auto] object-cover rounded-lg"
+                                    />
+                                </div>
+                                <div className="w-[70%] pl-4 flex flex-col justify-center">
+                                    <p className="mt-2 text-start text-xl font-bold">Deep Moisturizing Body Wash With Honey & Apricot</p>
+                                    <p className="text-start text-lg">₹300.00</p>
+                                </div>
                             </div>
-                            <div className="w-[70%] pl-4 flex flex-col justify-center">
-                                <p className="mt-2 text-start text-xl font-bold">Deep Moisturizing Body Wash With Honey & Apricot</p>
-                                {/* Add Price if necessary */}
-                                <p className="text-start text-lg">₹300.00</p>
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
+
 
                 {/* Close Button inside the Popup */}
                 <button
